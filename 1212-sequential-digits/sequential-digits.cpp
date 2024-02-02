@@ -18,12 +18,7 @@ public:
                 {
                     z+=s[i];
                 }
-                low=0;
-                reverse(z.begin(),z.end());
-                for(int i=0;i<z.size();i++)
-                {
-                    low+=(z[i]-'0')*(pow(10,i));
-                }
+                low=stoi(z);
                 y=0;
                 for(int i=0;i<x;i++)
                 {
