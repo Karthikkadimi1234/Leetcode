@@ -40,19 +40,12 @@ public:
                 break;
              }
          }
-         if(h==1) v.push_back(low);
+         if(h==1){
+            if(low>=p and low<=high) v.push_back(low);
+         }
             low+=y;
         }
-        vector<int>di;
-        for( auto it:v)
-        {
-            cout<<it<<" ";
-            if(it>=p and it<=high)
-            {
-             di.push_back(it);
-             }
-        }
-        return di;
+        return v;
     }
 
 };
