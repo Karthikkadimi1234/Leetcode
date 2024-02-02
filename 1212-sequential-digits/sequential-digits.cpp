@@ -18,8 +18,6 @@ public:
                 {
                     z+=s[i];
                 }
-             //   cout<<z<<" "<<x<<" "<<a<<" ";
-              //  sscanf(z, "%d", &low);
                 low=0;
                 reverse(z.begin(),z.end());
                 for(int i=0;i<z.size();i++)
@@ -32,9 +30,6 @@ public:
                      y+= 1*(pow(10,i));
                 }
             }
-           //cout<<low<<" ";
-         //   cout<<y<<" ";
-         cout<<y<<" ";
          string d=to_string(low);
          int h=1;
          for(int i=0;i<d.size();i++)
@@ -47,7 +42,6 @@ public:
          }
          if(h==1) v.push_back(low);
             low+=y;
-         //   cout<<low<<" "
         }
         vector<int>di;
         for( auto it:v)
