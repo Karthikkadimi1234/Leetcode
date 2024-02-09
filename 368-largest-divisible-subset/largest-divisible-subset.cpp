@@ -17,11 +17,11 @@ public:
         vector<int>pk;
         vector<int>upk;
         
-        if( dp[idx]<(int)v.size() and (v.empty() || nums[idx] % v[v.size()-1]==0))
+        if( dp[idx]<(int)v.size() and (v.empty() || nums[idx] % v.back()==0))
         {
             dp[idx]=v.size();
             v.push_back(nums[idx]);
-           pk=fun(idx+1,n,nums,v,dp);
+            pk=fun(idx+1,n,nums,v,dp);
             v.pop_back();
         }
       upk=fun(idx+1,n,nums,v,dp);
