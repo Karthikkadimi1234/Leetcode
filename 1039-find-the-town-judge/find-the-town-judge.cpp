@@ -2,8 +2,7 @@ class Solution {
 public:
     int findJudge(int n, vector<vector<int>>& trust) {
         map<int,int>mp;
-        if(n==1 and trust.size()==0) return 1;
-        if(n>1 and trust.size()==0) return -1;
+        if(n==1) return 1;
         for(int i=0;i<trust.size();i++)
         {
             mp[trust[i][1]]++;
@@ -17,7 +16,6 @@ public:
                 var=it.first;
             }    
         }
-        cout<<var<<" ";
         vector<int>res;
         for(int i=0;i<trust.size();i++)
         {
