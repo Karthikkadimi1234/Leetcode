@@ -7,21 +7,21 @@ public:
         {
             mp[trust[i][1]]++;
         }
-        int ma=INT_MIN,var;
-        for(auto it:mp) 
-        {
-            if(it.second>ma)
-            {
-                ma=it.second;
-                var=it.first;
-            }    
-        }
         vector<int>res;
         for(int i=0;i<trust.size();i++)
         {
             res.push_back(trust[i][0]);
         }
-        if(find(res.begin(),res.end(),var)==res.end() and ma==n-1) return var;
+        int ma=INT_MIN,var,f=0;
+        for(auto it:mp) 
+        {
+        if(find(res.begin(),res.end(),it.first)==res.end() and it.second==n-1)
+        {
+             var=it.first;  
+             f=1;
+        }
+        }
+        if(f==1) return var;
         return -1;
     }
 };
