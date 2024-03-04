@@ -15,17 +15,12 @@ public:
             else if(score>=1)
             {
                 power+=tokens[j];
-                 maxx=max(maxx,score);
                 score--;
                 j--;
             }
-            else
-            {
-                break;
-            }
-           
-        } 
-         maxx=max(maxx,score);
+            else break;
+            maxx=max(maxx,score);
+        }
         return maxx;
     }
 };
